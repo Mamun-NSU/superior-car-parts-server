@@ -60,6 +60,7 @@ async function run() {
       .db("manufacturer-website")
       .collection("payments");
 
+    // This verifyAdmin function check, where the user is admin or not  
     const verifyAdmin = async (req, res, next) => {
       const requester = req.decoded.email;
       const requesterAccount = await userCollection.findOne({
@@ -101,14 +102,14 @@ async function run() {
       res.send(part);
     });
 
-    // POST (add) one part
+    // POST (add) one part and only admin can added parts
     app.post("/parts", verifyJWT, verifyAdmin, async (req, res) => {
       const newPart = req.body;
       const result = await partsCollection.insertOne(newPart);
       res.send(result);
     });
 
-    // DELETE one part
+    // DELETE one part and only admin can added parts
     app.delete("/parts/:id", verifyJWT, verifyAdmin, async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
