@@ -119,7 +119,7 @@ async function run() {
 
     // ALL ORDERS API here
 
-    //GET  ORDER
+    //GET  ALL ORDERS only logIn user can get his/her all orders and the admin gets all the orders
 
     app.get("/orders", verifyJWT, async (req, res) => {
       const user_email = req.query.user_email;
@@ -142,7 +142,7 @@ async function run() {
       res.send(order);
     });
 
-    // POST (add) one order
+    // POST (add) one order and user can add order one by one 
     app.post("/orders", async (req, res) => {
       const newOrder = req.body;
       const result = await ordersCollection.insertOne(newOrder);
