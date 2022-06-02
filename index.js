@@ -73,6 +73,7 @@ async function run() {
       }
     };
 
+    // Only login users can make payments
     app.post("/create-payment-intent", verifyJWT, async (req, res) => {
       const service = req.body;
       const price = service.order_price;
@@ -124,7 +125,6 @@ async function run() {
     app.get("/orders", verifyJWT, async (req, res) => {
       const user_email = req.query.user_email;
 
-      // console.log(user_email);
       let query = {};
       if (user_email) {
         query = { user_email: user_email };
