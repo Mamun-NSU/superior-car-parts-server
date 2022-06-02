@@ -37,6 +37,7 @@ function verifyJWT(req, res, next) {
 async function run() {
   try {
     await client.connect();
+    // This is parts/products collection
     const partsCollection = client
       .db("manufacturer-website")
       .collection("parts");
@@ -45,10 +46,12 @@ async function run() {
       .db("manufacturer-website")
       .collection("reviews");
 
+    // This is orders collection by users
     const ordersCollection = client
       .db("manufacturer-website")
       .collection("orders");
 
+    // This is users collections      
     const userCollection = client
       .db("manufacturer-website")
       .collection("users");
