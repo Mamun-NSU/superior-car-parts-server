@@ -33,8 +33,9 @@ Private Git Repo Link for server site:
       - Protected Access: Without logIn people don't access some pages
       - JWT: We use JWT for verification
     - FOR BACKEND
-      - Heroku: We use Heroku for server data
+      - Heroku: We use Heroku for server data API
       - MongoDB: We use MongoDB for manage data
+      - Stripe: We use Stripe for payments
 
   - Function:
 
