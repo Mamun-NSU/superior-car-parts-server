@@ -203,6 +203,7 @@ async function run() {
       console.log(user);
     });
 
+    // API for make an user ADMIN; only an admin make another user as admin
     app.put("/user/admin/:email", verifyJWT, verifyAdmin, async (req, res) => {
       const email = req.params.email;
       const filter = { email: email };
@@ -231,7 +232,7 @@ async function run() {
     });
 
 
-    // DELETE one User
+    // DELETE one User; only admin can delete other user
     app.delete("/user/:id", verifyJWT, verifyAdmin, async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
