@@ -149,6 +149,8 @@ async function run() {
       const result = await ordersCollection.insertOne(newOrder);
       res.send(result);
     });
+
+    // when user paid for a order, then paid status become true
     app.patch("/orders/:id", verifyJWT, async (req, res) => {
       const id = req.params.id;
       const payment = req.body;
@@ -164,7 +166,7 @@ async function run() {
       const updatedOrder = await ordersCollection.updateOne(filter, updatedDoc);
       res.send(updatedOrder);
     });
-    // DELETE one order
+    // API for DELETE one order
     app.delete("/orders/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
