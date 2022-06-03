@@ -19,6 +19,7 @@ const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
 
+// This function is used to check where the user is logIn or not
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
