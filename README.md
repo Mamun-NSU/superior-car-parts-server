@@ -9,11 +9,11 @@ Live server on Google Firebase:
 
 ### `Github Link:`
 
-Private Git Repo Link for Client site:
-[https://github.com/programming-hero-web-course1/manufacturer-website-client-side-Mamun-NSU](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-Mamun-NSU)
+Git Repo Link for Client site:
+[https://github.com/Mamun-NSU/superior-car-parts-client](https://github.com/Mamun-NSU/superior-car-parts-client)
 
-Private Git Repo Link for server site:
-[https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Mamun-NSU](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Mamun-NSU)
+Git Repo Link for server site:
+[https://github.com/Mamun-NSU/superior-car-parts-server](https://github.com/Mamun-NSU/superior-car-parts-server)
 
 ### `Project details:`
 
