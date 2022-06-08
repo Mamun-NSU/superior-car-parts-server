@@ -54,3 +54,6 @@ Git Repo Link for server site:
     - React-query
     - MongoDB
     - Heroku
+
+Admin Email: mamun@abc.com
+  Password: 123456    
